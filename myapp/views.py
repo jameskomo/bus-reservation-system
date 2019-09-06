@@ -136,7 +136,7 @@ def signin(request):
             # username = request.session['username']
             context["user"] = name_r
             context["id"] = request.user.id
-            return render(request, 'myapp/success.html', context)
+            return render(request, 'myapp/findbus.html', context)
             # return HttpResponseRedirect('success')
         else:
             context["error"] = "Provide valid credentials"
