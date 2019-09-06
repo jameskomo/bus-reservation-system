@@ -12,3 +12,31 @@
     </div>
 
 {% endblock %}
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Hello User</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="{% url 'findbus' %}">Find Bus</a>
+                <a class="nav-item nav-link" href="{% url 'seebookings' %}">See Bookings</a>
+                {% if request.user.is_active %}
+                <a class="nav-item nav-link " href="{% url 'signout' %}">Sign out</a>
+                {% else %}
+                <a class="nav-item nav-link " href="{% url 'signup' %}">Sign Up</a>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </div>
+</nav>
