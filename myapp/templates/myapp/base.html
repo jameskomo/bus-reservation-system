@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/767ba5d30e.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'mysite/main.css' %}">
-
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     {% if title %}
         <title>Bus Reservation System - {{ title }}</title>
     {% else %}
@@ -23,7 +23,7 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top" style="background-image: linear-gradient( 89.1deg,  rgba(55,64,77,1) 0.7%, rgba(66,156,193,1) 88.4% );">
         <div class="container">
-          <a class="navbar-brand mr-4" href="#">Mtaa Watch <i class="fas fa-bus-alt"></i></a>
+          <a class="navbar-brand mr-4" href="{% url 'findbus' %}" style="font-family: 'Permanent Marker', cursive;">Book a Buu <i class="fas fa-bus-alt"></i></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -35,10 +35,9 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
-                <a class="nav-item nav-link" href="#">New Post</a>
                 <a class="nav-item nav-link" href="{% url 'signout' %}">Logout</a>
               {% else %}
-                <a class="nav-item nav-link" href="#">Login</a>
+                <a class="nav-item nav-link" href="{% url 'signin' %}">Login</a>
                 <a class="nav-item nav-link" href="{% url 'signup' %}">Register</a>
               {% endif %}
             </div>
