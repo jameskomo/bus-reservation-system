@@ -1,0 +1,60 @@
+{% extends 'myapp/base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<h2>Booking Confirmation</h2>
+<form action="{% url 'home' %}" method="post">
+
+    {% csrf_token %}
+    <h2>Your booking has been confirmed!</h2>
+    <h2>Thank you!</h2>
+    <h3>Bill details</h3>
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Bill details
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Bus name:</b> {{book.bus_name}}</li>
+                        <li class="list-group-item"><b>Starting point:</b> {{book.source}}</li>
+                        <li class="list-group-item"><b>Destination point:</b> {{book.dest}}</li>
+                        <li class="list-group-item"><b>Number of seats:</b> {{book.nos}}</li>
+                        <li class="list-group-item"><b>Price:</b> {{book.price}}</li>
+                        <li class="list-group-item"><b>Cost:</b> {{cost}}</li>
+                        <li class="list-group-item"><b>Date:</b> {{book.date}}</li>
+                        <li class="list-group-item"><b>Time:</b> {{book.time}}</li>
+                    </ul>
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pull-right">
+        <button type="submit" class="btn btn-primary float-right">OK</button>
+    </div>
+
+
+</form>
+
+
+{% endblock %}
