@@ -1,38 +1,76 @@
-{% extends 'myapp/base.html' %}
-{% block content %}
-<div class="container">
-        <div class="row">
-            <div class="col-sm-6 mx-auto" style="margin-top: 70px">
-                <h2>Find bus</h2>
-                <form action="{% url 'findbus' %}" method="post">
-                    {% csrf_token %}
-                    <div class="form-group row">
-                        <label for="example-email-input" class="col-2 col-form-label">Source</label>
-                        <div class="col-10">
-                            <input name='source' class="form-control" type="text" id="example-email-input">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="example-email-input" class="col-2 col-form-label">Destination</label>
-                        <div class="col-10">
-                            <input name='destination' class="form-control" type="text">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="example-email-input" class="col-2 col-form-label" >Date</label>
-                        <div class="col-10">
-                            <input name='date' class="form-control" type="date">
-                        </div>
-                    </div>
-                    <div class="pull-right">
-                        <button type="submit" class="btn btn-primary float-right">Find bus</button>
-                    </div>
-                    {{error}}
+{% load static %}
 
-                </form>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
 
-    </div>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-{% endblock %}
+	<title>Bus Search</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{% static 'mysite/bootstrap.min.css' %}">
+
+	<!-- Custom stlylesheet -->
+	<link rel="stylesheet" type="text/css" href="{% static 'mysite/style.css' %}">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Find a Bus</h1>
+						</div>
+						<form action="{% url 'findbus' %}" method="post">
+						{% csrf_token %}
+							<div class="form-group">
+								<span class="form-label">From</span>
+								<input name='source' class="form-control" type="text" id="example-email-input" placeholder="Enter source...">
+							</div>
+							<div class="form-group">
+								<span class="form-label">Destination</span>
+								<input name='destination' class="form-control" type="text" placeholder="Enter Destination...">
+							</div>
+							<div class="row">
+								<div class="col-sm-5">
+									<div class="form-group">
+										<span class="form-label">Date</span>
+										<input name='date' class="form-control" type="date" required>
+									</div>
+								</div>
+								
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn">Search Bus</button>
+							</div>
+							<h3 style="color: red;">{{error}}</h3>
+							
+						</form>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
