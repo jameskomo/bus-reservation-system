@@ -16,10 +16,13 @@ def home(request):
     if request.user.is_authenticated:
         return render(request, 'myapp/base.html')
     else:
-        return render(request, 'myapp/signin.html')
+        return render(request, 'users/login.html')
+
+def about(request):
+    return render(request, 'myapp/about.html', {'title': 'About'})
 
 
-@login_required(login_url='signin')
+@login_required(login_url='login')
 def findbus(request):
     context = {}
     if request.method == 'POST':
@@ -36,7 +39,7 @@ def findbus(request):
         return render(request, 'myapp/findbus.html')
 
 
-@login_required(login_url='signin')
+@login_required(login_url='login')
 def bookings(request):
     context = {}
     if request.method == 'POST':
@@ -73,7 +76,7 @@ def bookings(request):
         return render(request, 'myapp/findbus.html')
 
 
-@login_required(login_url='signin')
+@login_required(login_url='login')
 def cancellings(request):
     context = {}
     if request.method == 'POST':
@@ -96,7 +99,7 @@ def cancellings(request):
         return render(request, 'myapp/findbus.html')
 
 
-@login_required(login_url='signin')
+@login_required(login_url='login')
 def seebookings(request,new={}):
     context = {}
     id_r = request.user.id
@@ -120,9 +123,9 @@ def signup(request):
             return render(request, 'myapp/thank.html')
         else:
             context["error"] = "Provide valid credentials"
-            return render(request, 'myapp/signup.html', context)
+            return render(request, 'users/registers.html', context)
     else:
-        return render(request, 'myapp/signup.html', context)
+        return render(request, 'users/signup.html', context)
 
 
 def signin(request):
@@ -140,17 +143,17 @@ def signin(request):
             # return HttpResponseRedirect('success')
         else:
             context["error"] = "Provide valid credentials"
-            return render(request, 'myapp/signin.html', context)
+            return render(request, 'users/login.html', context)
     else:
         context["error"] = "You are not logged in"
-        return render(request, 'myapp/signin.html', context)
+        return render(request, 'users/login.html', context)
 
 
 def signout(request):
     context = {}
     logout(request)
     context['error'] = "You have been logged out"
-    return render(request, 'myapp/signin.html', context)
+    return render(request, 'users/login.html', context)
 
 
 def success(request):
