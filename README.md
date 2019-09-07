@@ -1,6 +1,7 @@
 # Bus Booking Application
 
 ![Image Gallery](https://www.greatbuyz.com/blog/wp-content/uploads/2017/11/booking-bus-ticket.jpg)
+https://github.com/jameskomo/bus-reservation-system/blob/master/myapp/static/img/bus1.jpg
 
 This is a Python-Django reservation system that allows passengers to search buses to book based on origin and destination, book buses and see billings, Cancel reservations with full authentication for login, register and profile managemnt
 
@@ -44,6 +45,19 @@ Behavior Driven Development (BDD)
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 ### Application ScreenShots
+#### Book or Cancel
+https://github.com/jameskomo/bus-reservation-system/blob/master/myapp/static/img/application%20images/bookandcancel.png?raw=true
+
+#### Bus Listing
+https://github.com/jameskomo/bus-reservation-system/blob/master/myapp/static/img/application%20images/buslisting.png?raw=true
+
+#### No Buses
+https://github.com/jameskomo/bus-reservation-system/blob/master/myapp/static/img/application%20images/nobuses.png?raw=true
+
+#### Authentication
+https://github.com/jameskomo/bus-reservation-system/blob/master/myapp/static/img/application%20images/login.png?raw=true
+
+https://github.com/jameskomo/bus-reservation-system/blob/master/myapp/static/img/application%20images/logout.png?raw=true
 
 
 ### Prerequisites
