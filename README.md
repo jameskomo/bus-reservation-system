@@ -1,6 +1,6 @@
 # Bus Booking Application
 
-![Image Gallery](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwis2afj4r7kAhWlx4UKHV2VBuoQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.indiamart.com%2Fproddetail%2Fonline-bus-reservation-system-19269409291.html&psig=AOvVaw2a5I9ZYWRgWtFajqBGI31e&ust=1567947769015360)
+![Image Gallery](https://www.greatbuyz.com/blog/wp-content/uploads/2017/11/booking-bus-ticket.jpg)
 
 This is a Python-Django reservation system that allows passengers to search buses to book based on origin and destination, book buses and see billings, Cancel reservations with full authentication for login, register and profile managemnt
 
