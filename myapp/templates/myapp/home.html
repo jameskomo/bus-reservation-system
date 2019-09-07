@@ -36,9 +36,10 @@
 				<div class="row">
 					<div class="booking-form">
 						<div class="form-header">
-							<h1>Book a car</h1>
+							<h1>Find a Bus</h1>
 						</div>
-						<form>
+						<form action="{% url 'findbus' %}" method="post">
+						{% csrf_token %}
 							<div class="form-group">
 								<span class="form-label">From</span>
 								<input class="form-control" type="text" placeholder="Enter source...">
@@ -60,11 +61,13 @@
 								<button class="submit-btn">Search Bus</button>
 							</div>
 						</form>
+						
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>

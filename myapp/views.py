@@ -30,7 +30,7 @@ def findbus(request):
         if bus_list:
             return render(request, 'myapp/list.html', locals())
         else:
-            context["error"] = "Sorry no buses availiable"
+            context["error"] = "Sorry no buses available"
             return render(request, 'myapp/findbus.html', context)
     else:
         return render(request, 'myapp/findbus.html')
