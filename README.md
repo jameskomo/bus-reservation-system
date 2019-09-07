@@ -27,20 +27,24 @@ Allows users to:
 
 Behavior Driven Development (BDD)
 ================================
-| Input                                                                                            | Output                                                                                                                                                   |
-|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Sign in with the application to start using.                                                     | On page load, click register on the NAV bar to register and login using created credentials to start using                                               |
-| Set up a profile about me and a general location and my neighborhood name.                       | On sign up and login, click profile on navbar to navigate to your profile and update neighborhood information and your profile information               |
-| Find a list of different businesses in my neighborhood.                                          | Navigate to Search dropdown on Navbar and click Search Business. In the search table, type the neighborhood your want to search                          |
-| Find Contact Information for the health department and Police authorities near my neighborhood.  | Navigate to Search dropdown on Navbar and click Search Contact. In the search table, type the neighborhood your want to search                           |
-| Create Posts that will be visible to everyone in my neighborhood.                                | Click on New Post on Nav bar to create new posts and click POST while done                                                                               |
-| Change My neighborhood when I decide to move out.                                                | To change nighborhood, go to profile and select from the dropdown button your new neighborhood                                                           |
-| Only view details of a single neighborhood.                                                      | On navigating to the neighborhood page, click the neighborhood title to navigate to enighborhood details and oncly view details of a single neighborhood |
-
+| Input               | Output                                                                                                                 |   |   |   |
+|---------------------|------------------------------------------------------------------------------------------------------------------------|---|---|---|
+| User Opens Homepage | The user is required to login or signup to access booking services but can search buses withthout authentication       |   |   |   |
+| User Signs up       | A user profile is created automatically through Django Signals and they are redirected to the home page                |   |   |   |
+| User Signs In       | The user is redirected to home page with various navigation options                                                    |   |   |   |
+| User Click Profile  | The user is able to update their profile details and save                                                              |   |   |   |
+| Find Bus            | The user is navigated to another page where they can enter search parameters                                           |   |   |   |
+| Search Bus          | After clicking Search bus, the user either gets no buses available message or is redirected to available buses listing |   |   |   |
+| Book Bus            | On selecting book bus, the user is asked to enter number of seats interested and the Bus ID                            |   |   |   |
+| Bill Details        | After booking bus, the user is presented with their billing details including total amounts                            |   |   |   |
+| Cancel Bus          | The user is asked to enter bus ID and the status changes to CANCELLED                                                  |   |   |   |
+| View Bookings       | On clicking this link, the user is able to view all booking history                                                    |   |   |   |
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Application ScreenShots
+
 
 ### Prerequisites
 
