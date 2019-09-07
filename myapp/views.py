@@ -14,7 +14,7 @@ from decimal import Decimal
 
 def home(request):
     if request.user.is_authenticated:
-        return render(request, 'myapp/home.html')
+        return render(request, 'myapp/base.html')
     else:
         return render(request, 'myapp/signin.html')
 
@@ -136,7 +136,7 @@ def signin(request):
             # username = request.session['username']
             context["user"] = name_r
             context["id"] = request.user.id
-            return render(request, 'myapp/findbus.html', context)
+            return render(request, 'myapp/base.html', context)
             # return HttpResponseRedirect('success')
         else:
             context["error"] = "Provide valid credentials"

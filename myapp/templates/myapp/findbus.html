@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +31,6 @@
 </head>
 
 <body>
-	<h1></h1>
 	
 	<div id="booking" class="section">
 		<div class="section-center">
@@ -61,6 +61,9 @@
 							</div>
 							<div class="form-btn">
 								<button class="submit-btn">Search Bus</button>
+							</div>
+							<div class="form-btn">
+									<a href="{% url 'seebookings' %}">View Bookings</a>
 							</div>
 							<h3 style="color: red;">{{error}}</h3>
 							
