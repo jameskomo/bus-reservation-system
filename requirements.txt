@@ -21,6 +21,7 @@ Pillow==6.1.0
 psycopg2==2.7.5
 psycopg2-binary==2.8.3
 python-dateutil==2.8.0
+python-decouple==3.1
 pytz==2018.5
 PyYAML==5.1.2
 six==1.12.0
