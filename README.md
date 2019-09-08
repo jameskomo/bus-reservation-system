@@ -5,7 +5,7 @@ https://github.com/jameskomo/bus-reservation-system/blob/master/myapp/static/img
 
 This is a Python-Django reservation system that allows passengers to search buses to book based on origin and destination, book buses and see billings, Cancel reservations with full authentication for login, register and profile managemnt
 
-You can see the live Application here [K.O.M.O Gallery](https://komo-buupass.herokuapp.com/).
+You can see the live Application here [BuuPass](https://komo-buupass.herokuapp.com/).
 
 Author Information
 ========
