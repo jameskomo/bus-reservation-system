@@ -15,7 +15,7 @@ django-hvad==1.8.0
 django-libs==2.0.2
 django-static-fontawesome==5.0.8.1
 django-widget-tweaks==1.4.2
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 gunicorn==19.9.0
 Pillow==6.2.0
 psycopg2==2.7.5
