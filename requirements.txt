@@ -26,5 +26,5 @@ pytz==2018.5
 PyYAML==5.1.2
 six==1.12.0
 soupsieve==1.9.3
-sqlparse==0.3.0
+sqlparse==0.4.4
 whitenoise==3.3.1
